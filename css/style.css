@@ -1,3 +1,30 @@
 body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
   margin-top: 80px;
 }
+
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 8px 2px 50px 2px;
+}
+
+.mycards {
+  margin: 0px 25px 0px 25px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-number {
+  text-align: right;
+}
+
+.read-more {
+  font-weight: bold;
+}
+
+/* .card-body {
+  height: auto;
+} */

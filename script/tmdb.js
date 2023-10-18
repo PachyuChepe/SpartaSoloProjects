@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                       <div class="card-body">
                           <h5 class="card-title">${item.name}</h5>
                           <p class="card-text overview">${truncatedOverview}</p>
-                          <p class="card-text">${item.vote_average}</p>
+                          <p class="card-text card-number">평점 ${item.vote_average}</p>
                       </div>
                   </div>`;
 
