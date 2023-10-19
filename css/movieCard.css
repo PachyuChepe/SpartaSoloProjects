@@ -1,3 +1,17 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  margin-top: 80px;
+}
+
+.mycards {
+  margin: 0px 25px 0px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
 .card {
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -5,14 +19,12 @@
   transition: max-height 0.3s;
   overflow: hidden;
   z-index: 3;
+  transform: translateY(0);
 }
 
 .card:hover {
   z-index: 4;
-}
-
-.mycards {
-  margin: 0px 25px 0px 25px;
+  transform: translateY(-10px);
 }
 
 .card-title {
