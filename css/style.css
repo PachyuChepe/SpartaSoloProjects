@@ -4,6 +4,10 @@ body {
   margin-top: 80px;
 }
 
+#site-name {
+  margin: 0 auto;
+}
+
 /* .card-body {
   max-height: auto;
 } */

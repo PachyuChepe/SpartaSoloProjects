@@ -1,3 +1,7 @@
+function switchLanguage(ISO) {
+  console.log(ISO);
+  console.log(options.headers["language"]);
+}
 //DOMContentLoaded: HTML 문서의 모든 내용들이 로드 될 때 실행
 document.addEventListener("DOMContentLoaded", function () {
   const options = {
@@ -14,18 +18,38 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentPage = 1; // 현재 페이지 추적
   let isLoading = false; // API 요청여부 확인
   let scrollTimeout = null; // 스크롤 이벤트 타임아웃
+  let setLanguage = localStorage.getItem("language") || "ko-KR";
+
+  function switchLanguage(ISO) {
+    localStorage.setItem("language", ISO);
+    location.reload();
+  }
+
+  const koreanFlagButton = document.getElementById("korean-flag");
+  const englishFlagButton = document.getElementById("english-flag");
+
+  koreanFlagButton.addEventListener("click", function () {
+    switchLanguage("ko-KR");
+  });
+
+  englishFlagButton.addEventListener("click", function () {
+    switchLanguage("en-US");
+  });
 
   const cardContainer = document.getElementById("card"); // HTML 문서에서 ID가 card인 요소를 찾아서 할당
 
   // 영화 데이터를 가져오는 함수
   function fetchMovies(page) {
     isLoading = true;
-    fetch(`https://api.themoviedb.org/3/tv/top_rated?language=ko-KR&page=${page}`, options)
+    // language=ko-KR: 한글, language=en-US: 영어
+    fetch(`https://api.themoviedb.org/3/tv/top_rated?language=${setLanguage}&page=${page}`, options)
       .then((response) => response.json()) // API options CORS 설정 등
       .then((response) => {
         // console.log(response);
-        // concat: 하나의 배열로 배열 합치기
-        movieData = movieData.concat(response.results); // API 검색 결과 저장
+        // 소개글이 작성된 영화만 받아오는 필터링
+        const filteredResults = response.results.filter((item) => item.overview && item.overview.trim() !== "");
+        // concat: 하나의 배열로 합체
+        movieData = movieData.concat(filteredResults); // API 검색 결과 저장
         total_pages = response.total_pages; // 최대 페이지 저장
         isLoading = false;
         filterMovies();
@@ -48,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const card = document.createElement("div"); // div 요소 생성
         card.classList = "col"; // 생성된 요소에 col 클래스 추가
         const truncatedOverview = truncateText(item.overview, 35);
-
         card.innerHTML = /*html*/ `
                   <div class="card h-100">
                       <img src="${image}" class="card-img-top" alt="...">

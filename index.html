@@ -18,8 +18,18 @@
   </head>
   <body>
     <header>
-      <h1 id="site-name">사이트 이름</h1>
-
+      <div id="site-name">대충 평점 보는 사이트</div>
+      <div class="dropdown" id="language-switcher">
+        <button class="dropbtn">언어 선택</button>
+        <div class="dropdown-content">
+          <button id="korean-flag">
+            <img src="img/korean-flag-icon.png" alt="한국 국기" />
+          </button>
+          <button id="english-flag">
+            <img src="img/us-flag-icon.png" alt="미국 국기" />
+          </button>
+        </div>
+      </div>
       <div id="search-box">
         <input type="text" id="search-input" placeholder="검색어를 입력하세요" />
         <!-- <button id="search-button">검색</button> -->
