@@ -1,7 +1,3 @@
-function switchLanguage(ISO) {
-  console.log(ISO);
-  console.log(options.headers["language"]);
-}
 //DOMContentLoaded: HTML 문서의 모든 내용들이 로드 될 때 실행
 document.addEventListener("DOMContentLoaded", function () {
   const options = {
@@ -73,12 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
         card.classList = "col"; // 생성된 요소에 col 클래스 추가
         const truncatedOverview = truncateText(item.overview, 35);
         card.innerHTML = /*html*/ `
-                  <div class="card h-100">
+                  <div class="card">
                       <img src="${image}" class="card-img-top" alt="...">
                       <div class="card-body">
                           <h5 class="card-title">${item.name}</h5>
                           <p class="card-text overview">${truncatedOverview}</p>
-                          <p class="card-text card-number">평점 ${item.vote_average}</p>
+                          <p class="card-text card-number">Rating ${item.vote_average}</p>
                       </div>
                   </div>`;
 

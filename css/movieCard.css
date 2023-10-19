@@ -1,15 +1,13 @@
 .card {
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 8px 2px 50px 2px;
+  margin: 8px 5px 0px 5px;
   transition: max-height 0.3s;
   overflow: hidden;
-  /* max-height: 350px; */
   z-index: 3;
 }
 
 .card:hover {
-  /* max-height: 500px; */
   z-index: 4;
 }
 
@@ -19,6 +17,9 @@
 
 .card-title {
   text-align: center;
+  font-size: 24px;
+  margin: 0px 0px 10px 0px;
+  color: black;
 }
 
 .card-number {
