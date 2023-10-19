@@ -4,37 +4,6 @@ body {
   margin-top: 80px;
 }
 
-.card {
-  position: relative;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 8px 2px 50px 2px;
-  transition: max-height 0.3s;
-  overflow: hidden;
-  /* max-height: 350px; */
-  z-index: 3;
-}
-
-.card:hover {
-  /* max-height: 500px; */
-  z-index: 4;
-}
-
-.mycards {
-  margin: 0px 25px 0px 25px;
-}
-
-.card-title {
-  text-align: center;
-}
-
-.card-number {
-  text-align: right;
-}
-
-.read-more {
-  font-weight: bold;
-}
-
 /* .card-body {
   max-height: auto;
 } */

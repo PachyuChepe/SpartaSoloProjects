@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.classList = "col"; // 생성된 요소에 col 클래스 추가
         const truncatedOverview = truncateText(item.overview, 35);
 
-        card.innerHTML = `
+        card.innerHTML = /*html*/ `
                   <div class="card h-100">
                       <img src="${image}" class="card-img-top" alt="...">
                       <div class="card-body">
