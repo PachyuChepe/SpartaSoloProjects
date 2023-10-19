@@ -1,3 +1,10 @@
+# 배포링크
+
+https://pachyuchepe.github.io/haebojo/
+<br>
+<br>
+<br>
+
 # haebojo
 
 자바스크립트 개인과제
