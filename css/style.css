@@ -5,8 +5,18 @@ body {
 }
 
 .card {
+  position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 8px 2px 50px 2px;
+  transition: max-height 0.3s;
+  overflow: hidden;
+  /* max-height: 350px; */
+  z-index: 3;
+}
+
+.card:hover {
+  /* max-height: 500px; */
+  z-index: 4;
 }
 
 .mycards {
@@ -26,5 +36,5 @@ body {
 }
 
 /* .card-body {
-  height: auto;
+  max-height: auto;
 } */
