@@ -1,5 +1,3 @@
-// export test code
-
 // export const arrs = [10, 20, 30, 40];
 // export { arrs2, getName };
 
