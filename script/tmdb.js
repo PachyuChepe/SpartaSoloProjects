@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 검색어를 기반으로 영화 데이터를 필터링하고 출력
   function filterMovies() {
     const searchTerm = searchInput.value.toLowerCase();
-    // console.log(searchTerm);
+    console.log(searchTerm);
     cardContainer.innerHTML = "";
 
     movieData.forEach((item) => {

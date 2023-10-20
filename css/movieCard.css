@@ -6,10 +6,10 @@ body {
 
 .mycards {
   margin: 0px 25px 0px 25px;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  position: relative;
+  position: relative; */
 }
 
 .card {
